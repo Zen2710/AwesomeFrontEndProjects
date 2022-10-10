@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Step-3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/aboutus/aboutusstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <!-- <script>
+        document.getElementById('btn').onclick = function () {
+            // var typeofwaste = document.getElementById("typeofwaste").value;
+            // localStorage.setItem("TypeOfWaste", typeofwaste);
+            // window.location.href = './step4.html';
+            // var l1 = document.getElementById("typeofwaste1");
+            // var l2 = document.getElementById("typeofwaste2");
+            // var l3 = document.getElementById("typeofwaste3");
+            var markedCheckbox = document.getElementsByName('pl');
+            var res = "";
+            for (var checkbox of markedCheckbox) {
+                if (checkbox.checked)
+                    // document.body.append(checkbox.value + ' ');
+                    res = res + checkbox.value + " ";
+            }
+            localStorage.setItem("TypeOfWaste", res);
+    </script> -->
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar" style="background-color: #078282FF;">
+        <img src="./images/logo.png" alt="Logo Not found" width="150px">
+        <button class="navbar-toggler" style="background-color: blue;" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-primary" type="button">Admin</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- -------------------------------------------------------------------------------------  -->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>Thank you for Recycling tons of waste</h1>
+                </div>
+                <div class="content">
+                    <h3>Please choose type of your waste</h3>
+                    <p>In Order To Help Us Filter The Waste.Please Select All Types Of Waste You Plan To Recycle.</p>
+                    <form action="./step4.html">
+                        <tr>
+                            <td> Mercury Based: <input type="checkbox" id="check1" name="pl" value="MERCURIC"> </td>
+                            <td> Lead Based: <input type="checkbox" id="check2" name="pl" value="PLUMBIC"> </td>
+                            <td> Asbestos Waste: <input type="checkbox" id="check3" name="pl" value="ABESTAL"> </td>
+                        </tr>
+                        <button class="btn btn-success" id="btn">Continue</button>
+                    </form>
+
+                </div>
+
+            </div>
+            <div class="image-section">
+                <img src="./images/category.png">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    document.getElementById('btn').onclick = function () {
+        var markedCheckbox = document.getElementsByName('pl');
+        var res = "";
+        for (var checkbox of markedCheckbox) {
+            if (checkbox.checked)
+                res = res + checkbox.value + " ";
+        }
+        localStorage.setItem("TypeOfWaste", res);
+        window.location.href = './step4.html';
+    }
+</script>
+
+</html>

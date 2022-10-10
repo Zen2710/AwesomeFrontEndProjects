@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Step-2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/aboutus/aboutusstyle.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        function myFunction() {
+            var totalwaste = document.getElementById("totalwaste").value;
+            localStorage.setItem("TotalWaste", totalwaste);
+            window.location.href = './step3.html';
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar" style="background-color: #078282FF;">
+        <img src="./images/logo.png" alt="Logo Not found" width="150px">
+        <button class="navbar-toggler" style="background-color: blue;" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Admin</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- -------------------------------------------------------------------------------------  -->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>Thank you for Uploading Certificate</h1>
+                </div>
+                <div class="content">
+                    <h3>Write an amount of waste to recycle</h3>
+                    <p>Please Input The Tons Of Waste You Would Like To Recycle.</p>
+                    <form action="./step3.html">
+                        <div class="form-group row ">
+                            <label class="col-sm-2 col-form-label text-info">Amount of waste</label>
+                            <div class="col-sm-10">
+                                <input type="number" id="totalwaste" class="form-control"
+                                    placeholder="Enter tons of waste" required>
+                            </div>
+
+                            <button class="btn btn-success" type="button"
+                                onClick="javascript:myFunction()">Continue</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="image-section">
+                <img src="./images/step-2.png">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

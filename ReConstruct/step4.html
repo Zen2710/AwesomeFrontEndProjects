@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Step-4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/aboutus/aboutusstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#datepicker').datepicker({
+                autoclose: true,
+                startDate: new Date(),
+                dateFormat: "dd/mm/yy"
+            });
+        });
+        function myFunction() {
+            var date = document.getElementById("date").value;
+            localStorage.setItem("Date", date);
+            window.location.href = './step5.html';
+        }
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar" style="background-color: #078282FF;">
+        <img src="./images/logo.png" alt="Logo Not found" width="150px">
+        <button class="navbar-toggler" style="background-color: blue;" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-primary" type="button">Admin</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- -------------------------------------------------------------------------------------  -->
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>Thank you for helping us categorize waste effectively</h1>
+                </div>
+                <div class="content">
+                    <h3>Please select date for pickup</h3>
+                    <p>Please Select The Date You Would Like Us To Pickup The Waste For Recycling Process.</p>
+                    <form action="./step5.html">
+                        <div class="row form-group">
+                            <label for="date" class="col-sm-1 col-form-label">Date</label>
+                            <div class="col-sm-4">
+                                <div class="input-group date" id="datepicker">
+                                    <input type="text" class="form-control" id="date">
+                                    <span class="input-group-append">
+                                        <span class="input-group-text bg-white">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-success" type="button"
+                            onclick="javascript:myFunction()">Continue</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="image-section">
+                <img src="./images/step-4.jpg">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
