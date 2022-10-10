@@ -1,0 +1,380 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.intro{
+    height: 75vh;
+    background-image: url("./images/bg-pattern-intro-desktop.svg"),linear-gradient(to right,hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+    background-position: 25%;
+    background-size: auto;
+    border-radius: 0 0 0 5rem;
+    padding: 2% 10%;
+}
+.navbar-nav{
+    display: flex;
+}
+
+
+.sec{
+    font-weight: 900;
+    background-color: #fff;
+    color: hsl(356, 100%, 66%);
+    border-radius: 3rem;
+    padding: 3px 25px ;
+}
+.fir{
+    display: inline-block;
+    color: #fff;
+    margin-right: 25px;
+    padding: 3px 25px ;
+  
+
+}
+.fir:hover{
+    background-color: #fff;
+    color: hsl(356, 100%, 66%);
+    border-radius: 3rem;
+    font-weight: 900;
+}
+.sec:hover{
+    color: #fff;
+}
+.menu a{
+    color: hsl(356, 100%, 66%);
+    font-weight: 700;
+}
+.tag-line{
+    margin-top: 10%;
+    color: #fff;
+    text-align: center;
+}
+.start{
+    margin-top: 2%;
+}
+.animate-left{
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+}
+.animate-right{
+    animation-name: moveInRight;
+    animation-duration: 1s;
+}
+.Blink{
+    display: inline-block;
+    margin-right: 20px;
+    font-size:32px;
+    font-weight: 700;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    cursor:default;
+}
+
+.Blink:hover{
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+.mid{
+    display: flex;
+    padding-left: 10%;
+    margin-top: 8%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+}
+.head{
+    text-align: center;
+    margin-bottom: 6%;  
+    color: hsl(208, 49%, 24%);
+}
+.mid-content{
+    width: 77vh;
+    margin-bottom: 6%;
+    line-height: 1.8;
+    color: hsl(207, 13%, 34%);
+    text-align: left;
+}
+.mid-content h2,.end-content h2{
+    color: hsl(208, 49%, 24%);
+    margin-bottom: 5%;
+}
+
+.mid-img{
+    position: absolute;
+    scale: 0.8;
+    right: -18%;
+    top:-11%;
+    animation-name: btt;
+    animation-delay: 0.8s;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+}
+
+.mob{
+    margin-top: 5%;
+    display: flex;
+    padding: 2% 10%;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/bg-pattern-circles.svg"),linear-gradient(hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    background-repeat: no-repeat;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-position: -35% 75%;
+    height: 50vh;
+    margin-top: 5%;
+}
+.mob-des{
+    margin-left: 6%;
+    padding: 2%;
+}
+.mob-des h2{
+    color: #fff;
+}
+.mob p{
+    color: hsl(240, 2%, 79%);
+    font-size: 14px;
+}
+
+.end{
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15%;
+    margin-top: 10%;
+}
+.end-img{
+    position: relative;
+    left: -25%;
+}
+.end-content{
+    width:77vh;
+    color: hsl(207, 13%, 34%);
+}   
+
+footer{
+    display: flex;
+    background-color: hsl(240, 10%, 16%);
+    justify-content: space-around;
+    color: hsl(240, 2%, 79%);
+    padding:3%;
+    border-top-right-radius: 100px;
+    margin-top: 10%;
+}
+footer a{
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(240, 2%, 79%);
+}
+.lnk:hover{
+    color: #fff;
+}
+.fir-ch{
+    font-weight: 500;
+    color: #fff;
+}
+@keyframes moveInLeft{ /*here orange coloured name is given by us wch we will add to the components that we make */
+    0%{
+        opacity: 0;/*element is invisible at the beginning*/
+        transform: translateX(-100px);/*make sure that -100 means 100px towards left side from its original position
+        and x axis is from left to right and y axis is from top to bottom*/
+    /*meaning that what should happen when website is just loading*/
+    /*this animation is being added to our mainheading that is heading primary*/
+    }
+    /*make sure that we may also add many intervals like 70% ...35% what ever we want */
+    80%{
+        opacity: 0.9;
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;/*element is fully visible when the website is loaded fully*/
+        transform: translate(0);
+    /*what should happen when website is almost finished loading*/
+    }
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        opacity: 0.9;
+        transform: translate(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes blink{
+    0%{
+       opacity: 0;
+    }
+    50%{
+       opacity: 0.5;;
+    }
+    60%{
+       opacity: 0;
+    }
+    70%{
+       opacity: 0.6;
+    }
+    80%{
+       opacity: 0;
+    }
+    90%{
+       opacity: 0.7;
+    }
+    95%{
+       opacity: 0;
+    }
+    100%{
+       opacity: 1;
+    }
+    
+}
+@keyframes btt{
+    0%{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@media (max-width:375px){
+    .intro{
+        padding: 0;
+    }
+    .tag-line{
+        margin-top: 25%;
+    }
+    .mid-img{
+        height: 400px;
+        display: inline-block;
+        scale:0.8;
+        position:static;
+        
+        
+    }
+    .mid{
+        text-align: center;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+    #img{
+        display: flex;
+        height: 400px;
+        align-items:center ;
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+    .mob{
+        flex-direction: column;
+        height: 70vh;
+        align-items: center;
+    }
+    .mob-des{
+        box-sizing: content-box;
+        height: 80%;
+    }
+    .mob-img{
+        scale: 0.5;
+        height:400px;
+        margin-top: -200px;
+    }
+    .mid-content{
+        text-align: center;
+    } 
+    .end{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .end-img{
+        position: static;
+        display: inline-block;
+        scale:0.6;
+        margin-left: 60%;
+        left: 0;
+
+    }
+    .hidden{
+        visibility: hidden;
+    }
+}
+@media (max-width:1000px) and (min-width:375px){
+    .mid-img{
+        height: 400px;
+        display: inline-block;
+        scale:0.8;
+        position:static;
+        
+    }
+    .hidden{
+        visibility: hidden;
+    }
+    .mid{
+        text-align: center;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+    #img{
+        display: flex;
+        height: 400px;
+        align-items:center ;
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+    .mob{
+        flex-direction: column;
+        height: 70vh;
+        align-items: center;
+    }
+    .mob-des{
+        box-sizing: content-box;
+        height: 80%;
+    }
+    .mob-img{
+        scale: 0.65;
+        height:400px;
+        margin-top: -200px;
+    }
+    .mid-content{
+        text-align: center;
+    }
+    .end{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .end-img{
+        position: static;
+        display: inline-block;
+        scale:0.6;
+        margin-left: 60%;
+        left: 0;
+
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .fir-ch{
+        margin: 25px 0;
+    }
+
+}
