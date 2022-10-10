@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Step-6</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/aboutus/aboutusstyle.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar" style="background-color: #078282FF;">
+        <img src="./images/logo.png" alt="Logo Not found" width="150px">
+        <button class="navbar-toggler" style="background-color: blue;" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-primary" type="button">Admin</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- -------------------------------------------------------------------------------------  -->
+    <div class="section">
+        <div class="container" style="display: flex;justify-content: center;align-items: center;">
+            <div class="content-section">
+                <div class="title">
+                    <h1>Thank you for recycling waste</h1>
+                </div>
+                <div class="content">
+                    <h3>You Can Download The Certificate Using The Button Given Below</h3>
+                    <canvas id="canvas" height="350px" width="500px"></canvas><br />
+                    <a href="#" id="download-btn">Download</a>
+                </div>
+
+            </div>
+            <div class="image-section">
+                <img src="./images/step6.jpeg">
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const nameInput = document.getElementById("name");
+    const downloadBtn = document.getElementById("download-btn");
+
+    const image = new Image();
+    image.src = "./images/certificate.jpg";
+    image.onload = function () {
+        drawImage();
+    };
+
+    function drawImage() {
+        // ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        ctx.font = "bold 15px alegreya medium";
+        ctx.fillStyle = "#022f56";
+        //ctx.fillText(nameInput.value, 40, 180)
+        ctx.fillText(localStorage.getItem("TotalWaste"), 309, 185);
+        ctx.fillText(localStorage.getItem("TypeOfWaste"), 80, 202);
+        ctx.fillText(localStorage.getItem("Date"), 190, 220);
+    }
+
+    // nameInput.addEventListener('input', function () {
+    // 	drawImage()
+    // })
+
+    downloadBtn.addEventListener("click", function () {
+        downloadBtn.href = canvas.toDataURL("image/jpg");
+        downloadBtn.download = "Certificate - " + localStorage.getItem("name");
+    });
+
+</script>
+
+</html>
