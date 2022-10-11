@@ -1,0 +1,36 @@
+.options {
+    margin: 2rem 0 1rem 0;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: #fff;
+}
+
+.options button {
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #218380;
+    text-align: start;
+}
+
+.options .selectedCorrect {
+    background-color: rgb(78, 235, 78);
+    color: black;
+}
+
+.options .selectedWrong {
+    background-color: rgb(234, 58, 58);
+}
+
+.answerStatus {
+    padding: 2rem 0;
+    border-top: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+    .questionText {
+        font-size: 1.2rem;
+    }
+}

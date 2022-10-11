@@ -1,0 +1,13 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.welcome button {
+    color: white;
+    width: 8rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #218380;
+}
