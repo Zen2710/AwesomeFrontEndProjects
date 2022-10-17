@@ -1,0 +1,18 @@
+.highscore {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.highscore form {
+    display: flex;
+    gap: 1rem;
+}
+
+.highscore button {
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #218380;
+    border: 1px solid #218380;
+}
